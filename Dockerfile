@@ -11,4 +11,4 @@ RUN mv /etc/nginx/sites-available/invoicespring-proxy.conf /etc/nginx/sites-avai
 
 EXPOSE 80
 
-CMD [ "nginx", "restart" ]
+CMD [ "service", "nginx", "restart" ]
