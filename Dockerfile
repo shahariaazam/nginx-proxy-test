@@ -1,7 +1,7 @@
 FROM previewtechs/nginx:proxy
 
 # Bundle app source
-COPY . /usr/src/app
+COPY . /usr/share/nginx/html
 
 RUN rm -rf /etc/nginx/sites-available/default
 
