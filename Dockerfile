@@ -7,6 +7,8 @@ RUN rm -rf /etc/nginx/nginx.conf
 
 COPY nginx.conf /etc/nginx/nginx.conf
 
+RUN service nginx restart
+
 EXPOSE 80
 
 CMD [ "service", "nginx", "restart" ]
