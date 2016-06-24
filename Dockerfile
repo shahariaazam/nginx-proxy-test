@@ -5,7 +5,7 @@ COPY . /usr/src/app
 
 RUN rm -rf /etc/nginx/sites-available/default
 
-COPY invoicespring-proxy.conf /etc/nginx/sites-available/default
+COPY invoicespring-proxy.conf /etc/nginx/sites-available
 
 RUN mv /etc/nginx/sites-available/invoicespring-proxy.conf /etc/nginx/sites-available/default
 
