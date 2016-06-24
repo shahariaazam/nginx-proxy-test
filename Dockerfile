@@ -4,7 +4,7 @@ FROM previewtechs/nginx:proxy
 COPY . /usr/src/app
 COPY invoicespring-proxy.conf /etc/nginx/sites-available
 
-RUN echo "include sites-available/invoicespring-proxy.conf" >> /etc/nginx/sites-available/default
+RUN echo "include sites-available/invoicespring-proxy.conf;" >> /etc/nginx/sites-available/default
 
 EXPOSE 80
 
