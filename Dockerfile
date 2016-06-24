@@ -3,10 +3,10 @@ FROM previewtechs/nginx:proxy
 # Bundle app source
 COPY . /usr/share/nginx/html
 
-RUN rm -rf /etc/nginx/sites-available/default
+RUN rm -rf /etc/nginx/nginx.conf
 
-COPY invoicespring-proxy.conf /etc/nginx/sites-available
-
-RUN mv /etc/nginx/sites-available/invoicespring-proxy.conf /etc/nginx/sites-available/default
+COPY nginx.conf /etc/nginx/nginx.conf
 
 EXPOSE 80
+
+CMD [ "service", "nginx", "start" ]
